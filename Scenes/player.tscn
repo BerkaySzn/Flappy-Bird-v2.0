@@ -1,0 +1,130 @@
+[gd_scene load_steps=14 format=3 uid="uid://dmykjblh603b5"]
+
+[ext_resource type="Texture2D" uid="uid://c51ir0vuo5eut" path="res://Assets/Sprite/Player/bee.idle.png" id="1_kfhra"]
+[ext_resource type="Script" path="res://Scenes/player.gd" id="1_r7tco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pirn8"]
+size = Vector2(23.5, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvsoa"]
+atlas = ExtResource("1_kfhra")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kamu"]
+atlas = ExtResource("1_kfhra")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yow0f"]
+atlas = ExtResource("1_kfhra")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h6bx"]
+atlas = ExtResource("1_kfhra")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4ng6"]
+atlas = ExtResource("1_kfhra")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3wwd"]
+atlas = ExtResource("1_kfhra")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i7njv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvsoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kamu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yow0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h6bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4ng6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3wwd")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Up",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_tixqi"]
+resource_name = "Idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_ufr5g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_34myh"]
+_data = {
+"Idle": SubResource("Animation_tixqi"),
+"RESET": SubResource("Animation_ufr5g")
+}
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_r7tco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.75, -1.5)
+shape = SubResource("RectangleShape2D_pirn8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i7njv")
+animation = &"Idle"
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_34myh")
+}
+autoplay = "Idle"
