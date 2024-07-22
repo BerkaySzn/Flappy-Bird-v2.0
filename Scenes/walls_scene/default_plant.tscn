@@ -168,6 +168,7 @@ libraries = {
 autoplay = "idle"
 
 [node name="killzone" parent="." instance=ExtResource("2_dpu1j")]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="killzone"]
 polygon = PackedVector2Array(23, -5, 10, -24, 15, -44, 22, -58, 3, -94, 6, -109, 13, -106, 17, -107, 13, -118, -2, -126, -14, -113, -19, -96, -13, -78, -8, -64, -9, -52, -18, -38, -21, -21, -20, -4)
