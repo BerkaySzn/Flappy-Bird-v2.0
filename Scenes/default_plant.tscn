@@ -1,0 +1,173 @@
+[gd_scene load_steps=17 format=3 uid="uid://cnsfc7upb0ctd"]
+
+[ext_resource type="Script" path="res://Scenes/default_plant.gd" id="1_6bywt"]
+[ext_resource type="Texture2D" uid="uid://c23bmqgrmuwrj" path="res://Assets/Sprite/Envoriment/wall_tentacle.png" id="1_pu3e1"]
+[ext_resource type="PackedScene" uid="uid://c4s2ollktqlqw" path="res://Scenes/killzone.tscn" id="2_dpu1j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhk2x"]
+atlas = ExtResource("1_pu3e1")
+region = Rect2(0, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8gh7"]
+atlas = ExtResource("1_pu3e1")
+region = Rect2(64, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7u3oi"]
+atlas = ExtResource("1_pu3e1")
+region = Rect2(128, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0oxy"]
+atlas = ExtResource("1_pu3e1")
+region = Rect2(192, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmin4"]
+atlas = ExtResource("1_pu3e1")
+region = Rect2(256, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ucr7"]
+atlas = ExtResource("1_pu3e1")
+region = Rect2(320, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u7h6"]
+atlas = ExtResource("1_pu3e1")
+region = Rect2(384, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qctud"]
+atlas = ExtResource("1_pu3e1")
+region = Rect2(448, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lax21"]
+atlas = ExtResource("1_pu3e1")
+region = Rect2(512, 0, 64, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_54et1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhk2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8gh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7u3oi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0oxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmin4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ucr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u7h6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qctud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lax21")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="Animation" id="Animation_x4o8t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [PackedVector2Array(23, -2, 8, -27, 14, -39, 21, -58, 13, -75, 4, -89, 6, -108, 12, -105, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -8, -49, -16, -38, -17, -22, -14, -1)]
+}
+
+[sub_resource type="Animation" id="Animation_7jhmr"]
+resource_name = "idle"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(23, -2, 12, -26, 14, -39, 21, -58, 13, -75, 3, -99, 6, -108, 12, -105, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -8, -49, -16, -38, -17, -22, -14, -1), PackedVector2Array(23, -2, 8, -27, 14, -39, 21, -58, 13, -75, 4, -89, 6, -108, 12, -105, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -8, -49, -16, -38, -17, -22, -14, -1), PackedVector2Array(23, -2, 8, -27, 14, -39, 18, -56, 13, -75, 4, -89, 6, -108, 12, -105, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -16, -54, -23, -39, -17, -22, -14, -1), PackedVector2Array(23, -2, 7, -29, 9, -44, 18, -56, 13, -75, 4, -89, 2, -104, 12, -105, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -16, -54, -23, -39, -17, -22, -14, -1), PackedVector2Array(23, -2, 4, -30, 8, -43, 14, -57, 13, -75, 4, -89, 0, -102, 4, -111, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -16, -54, -23, -39, -17, -22, -14, -1), PackedVector2Array(23, -2, 4, -30, 8, -43, 17, -57, 13, -75, 4, -89, 0, -102, 4, -111, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -16, -54, -23, -39, -17, -22, -14, -1), PackedVector2Array(23, -2, 4, -30, 8, -43, 17, -57, 13, -75, 4, -89, 0, -102, 4, -111, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -16, -54, -23, -39, -17, -22, -14, -1), PackedVector2Array(23, -2, 4, -30, 8, -43, 17, -57, 13, -75, 4, -89, 0, -102, 4, -111, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -16, -54, -23, -39, -17, -22, -14, -1), PackedVector2Array(23, -2, 4, -30, 8, -43, 17, -57, 13, -75, 4, -89, 0, -102, 4, -111, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -16, -54, -23, -39, -17, -22, -14, -1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m073d"]
+_data = {
+"RESET": SubResource("Animation_x4o8t"),
+"idle": SubResource("Animation_7jhmr")
+}
+
+[node name="default_plant" type="CharacterBody2D"]
+script = ExtResource("1_6bywt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(23, -2, 8, -27, 14, -39, 21, -58, 13, -75, 4, -89, 6, -108, 12, -105, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -8, -49, -16, -38, -17, -22, -14, -1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_54et1")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m073d")
+}
+autoplay = "idle"
+
+[node name="killzone" parent="." instance=ExtResource("2_dpu1j")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="killzone"]
+polygon = PackedVector2Array(23, -5, 10, -24, 15, -44, 22, -58, 3, -94, 6, -109, 13, -106, 17, -107, 13, -118, -2, -126, -14, -113, -19, -96, -13, -78, -8, -64, -9, -52, -18, -38, -21, -21, -20, -4)

@@ -1,35 +1,63 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5cay1yu14acr"]
+[gd_scene load_steps=10 format=3 uid="uid://c5cay1yu14acr"]
 
 [ext_resource type="PackedScene" uid="uid://dmykjblh603b5" path="res://Scenes/player.tscn" id="1_6xkrl"]
+[ext_resource type="PackedScene" uid="uid://cnsfc7upb0ctd" path="res://Scenes/default_plant.tscn" id="2_lotc4"]
+[ext_resource type="PackedScene" uid="uid://bxqbad8uicd1c" path="res://Scenes/projectile_plant.tscn" id="3_yc5uw"]
+[ext_resource type="PackedScene" uid="uid://c4s2ollktqlqw" path="res://Scenes/killzone.tscn" id="5_ct0u2"]
+[ext_resource type="PackedScene" uid="uid://croqxsp8sp1cy" path="res://Scenes/flame_plant.tscn" id="6_afdbu"]
+[ext_resource type="PackedScene" uid="uid://cq12ruw1mh3dw" path="res://Scenes/aaaaa.tscn" id="6_vfv88"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgpn6"]
-size = Vector2(1185, 101)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1q5dx"]
+size = Vector2(663, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_br28j"]
-size = Vector2(147, 781.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfht2"]
+size = Vector2(746, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88m3f"]
+size = Vector2(25.5, 345.5)
 
 [node name="World" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(524, 458)
+zoom = Vector2(2, 2)
+
 [node name="Player" parent="." instance=ExtResource("1_6xkrl")]
-position = Vector2(354, 317)
+position = Vector2(360, 519)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-15, 61)
+[node name="killzone" parent="." instance=ExtResource("5_ct0u2")]
+position = Vector2(75, 516)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(599, 606)
-shape = SubResource("RectangleShape2D_dgpn6")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
+position = Vector2(431, -219)
+shape = SubResource("RectangleShape2D_1q5dx")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(599, -75)
-shape = SubResource("RectangleShape2D_dgpn6")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(447, 109)
+shape = SubResource("RectangleShape2D_lfht2")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(25, 267)
-shape = SubResource("RectangleShape2D_br28j")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="killzone"]
+position = Vector2(154, -52)
+shape = SubResource("RectangleShape2D_88m3f")
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 288.0
-offset_top = 208.0
-offset_right = 431.0
-offset_bottom = 248.0
+[node name="Walls" type="Node" parent="."]
+
+[node name="default_plant" parent="Walls" instance=ExtResource("2_lotc4")]
+position = Vector2(608, 620)
+
+[node name="default_plant2" parent="Walls" instance=ExtResource("2_lotc4")]
+position = Vector2(599, 294)
+rotation = -3.14159
+
+[node name="projectile_plant2" parent="Walls" instance=ExtResource("3_yc5uw")]
+position = Vector2(518, 298)
+rotation = 3.14159
+
+[node name="projectile_plant" parent="Walls" instance=ExtResource("3_yc5uw")]
+position = Vector2(473, 617)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_afdbu")]
+position = Vector2(604, 607)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("6_vfv88")]
+position = Vector2(361, 610)
