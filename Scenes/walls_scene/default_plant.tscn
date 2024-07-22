@@ -1,6 +1,5 @@
-[gd_scene load_steps=17 format=3 uid="uid://cnsfc7upb0ctd"]
+[gd_scene load_steps=16 format=3 uid="uid://cnsfc7upb0ctd"]
 
-[ext_resource type="Script" path="res://Scenes/default_plant.gd" id="1_6bywt"]
 [ext_resource type="Texture2D" uid="uid://c23bmqgrmuwrj" path="res://Assets/Sprite/Envoriment/wall_tentacle.png" id="1_pu3e1"]
 [ext_resource type="PackedScene" uid="uid://c4s2ollktqlqw" path="res://Scenes/killzone.tscn" id="2_dpu1j"]
 
@@ -150,7 +149,7 @@ _data = {
 }
 
 [node name="default_plant" type="CharacterBody2D"]
-script = ExtResource("1_6bywt")
+metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(23, -2, 8, -27, 14, -39, 21, -58, 13, -75, 4, -89, 6, -108, 12, -105, 19, -107, 12, -118, -2, -125, -14, -112, -16, -96, -12, -79, -5, -62, -8, -49, -16, -38, -17, -22, -14, -1)
