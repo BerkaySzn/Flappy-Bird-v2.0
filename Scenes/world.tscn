@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://c5cay1yu14acr"]
 
 [ext_resource type="PackedScene" uid="uid://dmykjblh603b5" path="res://Scenes/player.tscn" id="1_6xkrl"]
-[ext_resource type="PackedScene" uid="uid://cnsfc7upb0ctd" path="res://Scenes/default_plant.tscn" id="2_lotc4"]
-[ext_resource type="PackedScene" uid="uid://bxqbad8uicd1c" path="res://Scenes/projectile_plant.tscn" id="3_yc5uw"]
+[ext_resource type="PackedScene" path="res://Scenes/default_plant.tscn" id="2_lotc4"]
+[ext_resource type="PackedScene" path="res://Scenes/projectile_plant.tscn" id="3_yc5uw"]
 [ext_resource type="PackedScene" uid="uid://c4s2ollktqlqw" path="res://Scenes/killzone.tscn" id="5_ct0u2"]
-[ext_resource type="PackedScene" uid="uid://croqxsp8sp1cy" path="res://Scenes/flame_plant.tscn" id="6_afdbu"]
-[ext_resource type="PackedScene" uid="uid://cq12ruw1mh3dw" path="res://Scenes/aaaaa.tscn" id="6_vfv88"]
+[ext_resource type="PackedScene" path="res://Scenes/flame_plant.tscn" id="6_afdbu"]
+[ext_resource type="PackedScene" path="res://Scenes/wall_flyeater.tscn" id="6_vfv88"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1q5dx"]
 size = Vector2(663, 20)
@@ -23,7 +23,7 @@ position = Vector2(524, 458)
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("1_6xkrl")]
-position = Vector2(360, 519)
+position = Vector2(320, 447)
 
 [node name="killzone" parent="." instance=ExtResource("5_ct0u2")]
 position = Vector2(75, 516)
@@ -56,8 +56,12 @@ rotation = 3.14159
 [node name="projectile_plant" parent="Walls" instance=ExtResource("3_yc5uw")]
 position = Vector2(473, 617)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("6_afdbu")]
-position = Vector2(604, 607)
+[node name="CharacterBody2D" parent="Walls" instance=ExtResource("6_afdbu")]
+position = Vector2(713, 302)
+rotation = 3.14159
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("6_vfv88")]
-position = Vector2(361, 610)
+[node name="CharacterBody2D2" parent="Walls" instance=ExtResource("6_vfv88")]
+position = Vector2(326, 608)
+
+[node name="CharacterBody2D3" parent="Walls" instance=ExtResource("6_afdbu")]
+position = Vector2(422, 617)
