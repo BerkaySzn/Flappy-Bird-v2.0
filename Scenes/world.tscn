@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://c5cay1yu14acr"]
 
-[ext_resource type="PackedScene" uid="uid://dmykjblh603b5" path="res://Scenes/player.tscn" id="1_6xkrl"]
-[ext_resource type="Script" path="res://Scenes/Walls.gd" id="3_8r77w"]
-[ext_resource type="PackedScene" uid="uid://bxdud24sv3kvb" path="res://default_plant_combination.tscn" id="3_te16u"]
+[ext_resource type="PackedScene" uid="uid://dmykjblh603b5" path="res://Scenes/player_scene/player.tscn" id="1_6xkrl"]
+[ext_resource type="Script" path="res://Scripts/walls_srcipts/Walls.gd" id="3_8r77w"]
+[ext_resource type="PackedScene" uid="uid://bxdud24sv3kvb" path="res://Scenes/final_walls_scene/default_plant_combination.tscn" id="3_te16u"]
 [ext_resource type="PackedScene" uid="uid://c4s2ollktqlqw" path="res://Scenes/killzone.tscn" id="5_ct0u2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1q5dx"]
