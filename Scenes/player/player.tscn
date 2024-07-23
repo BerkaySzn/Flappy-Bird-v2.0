@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://dmykjblh603b5"]
 
 [ext_resource type="Texture2D" uid="uid://c51ir0vuo5eut" path="res://Assets/Sprite/Player/bee.idle.png" id="1_kfhra"]
-[ext_resource type="Script" path="res://Scenes/player.gd" id="1_r7tco"]
+[ext_resource type="Script" path="res://Scripts/player/player.gd" id="1_r7tco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pirn8"]
 size = Vector2(21, 19)

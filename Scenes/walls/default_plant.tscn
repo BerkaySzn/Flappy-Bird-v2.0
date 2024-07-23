@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://cnsfc7upb0ctd"]
 
 [ext_resource type="Texture2D" uid="uid://c23bmqgrmuwrj" path="res://Assets/Sprite/Envoriment/wall_tentacle.png" id="1_pu3e1"]
-[ext_resource type="PackedScene" uid="uid://c4s2ollktqlqw" path="res://Scenes/killzone.tscn" id="2_dpu1j"]
+[ext_resource type="PackedScene" uid="uid://c4s2ollktqlqw" path="res://killzone.tscn" id="2_dpu1j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xhk2x"]
 atlas = ExtResource("1_pu3e1")
