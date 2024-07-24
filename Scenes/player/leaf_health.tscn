@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://btxsmtktb5dsj"]
+
+[ext_resource type="Texture2D" uid="uid://0tgcrxtwmmn1" path="res://Assets/Sprite/Player/health/one_leaf_health.png" id="1_t1yfg"]
+
+[node name="leaf_health" type="Node2D"]
+position = Vector2(0, 24)
+
+[node name="OneLeafHealth" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_t1yfg")
+
+[node name="OneLeafHealth2" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+rotation = 1.5708
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_t1yfg")
+
+[node name="OneLeafHealth3" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+rotation = 3.14159
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_t1yfg")
+
+[node name="OneLeafHealth4" type="Sprite2D" parent="."]
+position = Vector2(2.84217e-14, -24)
+rotation = -1.5708
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_t1yfg")
