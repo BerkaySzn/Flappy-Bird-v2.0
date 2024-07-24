@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvqu6smitx5xm"]
+
+[ext_resource type="Script" path="res://Scripts/score/Score.gd" id="1_m7xei"]
+
+[node name="Score" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m7xei")
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 495.0
+offset_top = 305.0
+offset_right = 535.0
+offset_bottom = 328.0
+text = "0"
+horizontal_alignment = 1
+
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]

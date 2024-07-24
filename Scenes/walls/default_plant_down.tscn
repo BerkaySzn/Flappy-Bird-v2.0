@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://lal0lqsfkfnj"]
+
+[ext_resource type="Texture2D" uid="uid://c23bmqgrmuwrj" path="res://Assets/Sprite/Envoriment/wall_tentacle.png" id="1_4qo0o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhk2x"]
+atlas = ExtResource("1_4qo0o")
+region = Rect2(0, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8gh7"]
+atlas = ExtResource("1_4qo0o")
+region = Rect2(64, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7u3oi"]
+atlas = ExtResource("1_4qo0o")
+region = Rect2(128, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0oxy"]
+atlas = ExtResource("1_4qo0o")
+region = Rect2(192, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmin4"]
+atlas = ExtResource("1_4qo0o")
+region = Rect2(256, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ucr7"]
+atlas = ExtResource("1_4qo0o")
+region = Rect2(320, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u7h6"]
+atlas = ExtResource("1_4qo0o")
+region = Rect2(384, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qctud"]
+atlas = ExtResource("1_4qo0o")
+region = Rect2(448, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lax21"]
+atlas = ExtResource("1_4qo0o")
+region = Rect2(512, 0, 64, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0kowi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhk2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8gh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7u3oi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0oxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmin4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ucr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u7h6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qctud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lax21")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[node name="default_Plant_down" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 50)
+sprite_frames = SubResource("SpriteFrames_0kowi")
+animation = &"idle"
+autoplay = "idle"
