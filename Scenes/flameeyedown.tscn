@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://co0fp5fhqqeks"]
+
+[ext_resource type="Texture2D" uid="uid://c8gwv0i0xei17" path="res://Assets/Sprite/Envoriment/flameeye.png" id="1_mrs2i"]
+
+[node name="Flameeyedown" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mrs2i")
+offset = Vector2(0, 110)

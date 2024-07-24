@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://s52vsgribacr"]
+
+[ext_resource type="Texture2D" uid="uid://c8gwv0i0xei17" path="res://Assets/Sprite/Envoriment/flameeye.png" id="1_pyqej"]
+
+[node name="Flameyeup" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pyqej")
+offset = Vector2(0, -110)
+flip_v = true

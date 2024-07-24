@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1vlati7s7fsc"]
+
+[ext_resource type="Texture2D" uid="uid://bq62pqxkahh8m" path="res://Assets/Sprite/Envoriment/plant.png" id="1_dr8xq"]
+
+[node name="plant_up" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dr8xq")
+offset = Vector2(0, -110)
+flip_v = true
