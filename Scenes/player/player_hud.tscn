@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://mwl0uscplkve"]
+
+[ext_resource type="Texture2D" uid="uid://b2s2ic5ntvtlu" path="res://Assets/Sprite/Player/health/four_leaf_health.png" id="1_v3of7"]
+
+[node name="player_hud" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="SonraSilicem" type="Camera2D" parent="."]
+position = Vector2(524, 458)
+zoom = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(272, 328)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_v3of7")

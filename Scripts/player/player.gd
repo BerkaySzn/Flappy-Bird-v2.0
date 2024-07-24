@@ -26,4 +26,4 @@ func _physics_process(delta):
 		
 		
 func _on_timer_timeout():
-	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/menu/menu.tscn")
