@@ -1,0 +1,152 @@
+[gd_scene load_steps=21 format=3 uid="uid://dr6r7rp6ylefy"]
+
+[ext_resource type="Texture2D" uid="uid://b737fm17ijbnn" path="res://Assets/Sprite/Envoriment/wall_flytrap.png" id="1_ycpm8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_806mc"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38meh"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld8t8"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqfbf"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqaa6"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18ov3"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_talm2"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qkkx"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sr6io"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnf1o"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xm6a"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eaed"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtcl2"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(1536, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgace"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olveu"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx3n0"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78gi1"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v83i"]
+atlas = ExtResource("1_ycpm8")
+region = Rect2(1536, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tiwwq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_806mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38meh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld8t8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqfbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqaa6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18ov3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_talm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qkkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr6io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnf1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xm6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8eaed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtcl2")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgace")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olveu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vx3n0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78gi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1v83i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="fly_eater_up" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -62)
+sprite_frames = SubResource("SpriteFrames_tiwwq")
+animation = &"idle"
+autoplay = "idle"
+offset = Vector2(0, -110)
+flip_v = true

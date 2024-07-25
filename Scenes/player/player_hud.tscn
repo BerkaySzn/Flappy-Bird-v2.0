@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://mwl0uscplkve"]
+
+[node name="player_hud" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="SonraSilicem" type="Camera2D" parent="."]
+position = Vector2(524, 458)
+zoom = Vector2(2, 2)
