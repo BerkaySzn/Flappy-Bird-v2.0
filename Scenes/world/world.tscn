@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=11 format=3 uid="uid://c5cay1yu14acr"]
+=======
+[gd_scene load_steps=34 format=3 uid="uid://c5cay1yu14acr"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://dmykjblh603b5" path="res://Scenes/player/player.tscn" id="1_6xkrl"]
 [ext_resource type="Script" path="res://Scripts/world/world.gd" id="1_d6y3b"]
@@ -7,6 +11,30 @@
 [ext_resource type="PackedScene" uid="uid://bxdud24sv3kvb" path="res://Scenes/final_walls/default_plant_combination.tscn" id="3_te16u"]
 [ext_resource type="PackedScene" uid="uid://c4s2ollktqlqw" path="res://killzone.tscn" id="5_ct0u2"]
 [ext_resource type="PackedScene" uid="uid://dvqu6smitx5xm" path="res://Scenes/score/score.tscn" id="6_l620p"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" uid="uid://geqbyyi5brv4" path="res://Scenes/walls/fly_eater_down.tscn" id="7_g02p1"]
+[ext_resource type="Texture2D" uid="uid://csl7kr5f5affy" path="res://Assets/Sprite/Background/Cloud1.png" id="11_cusgc"]
+[ext_resource type="Texture2D" uid="uid://bntqqvf6lnwpr" path="res://Assets/Sprite/Background/Mountain1.png" id="11_eoc51"]
+[ext_resource type="Script" path="res://Scripts/background/thirdBG.gd" id="11_fslt7"]
+[ext_resource type="Texture2D" uid="uid://pu83gccg7klp" path="res://Assets/Sprite/Background/Ground.png" id="11_qteej"]
+[ext_resource type="Script" path="res://Scripts/background/fifthBG.gd" id="11_tui3u"]
+[ext_resource type="Script" path="res://Scripts/background/firstBG.gd" id="11_u4b21"]
+[ext_resource type="Script" path="res://Scripts/background/secondBG.gd" id="11_yg1bc"]
+[ext_resource type="Texture2D" uid="uid://6ryx26dcrw0s" path="res://Assets/Sprite/Background/grass-bg3.png" id="12_1r5kl"]
+[ext_resource type="Texture2D" uid="uid://b3av6mr8d4uuq" path="res://Assets/Sprite/Background/grass-bg2.png" id="12_h2l24"]
+[ext_resource type="Texture2D" uid="uid://bg2w1uffky68t" path="res://Assets/Sprite/Background/Mountain2.png" id="12_n6d8y"]
+[ext_resource type="Texture2D" uid="uid://q1jq3vplat4g" path="res://Assets/Sprite/Background/Cloud2.png" id="12_v581v"]
+[ext_resource type="Texture2D" uid="uid://djhnyqmo7osc0" path="res://Assets/Sprite/Background/grass-bg1.png" id="13_qxd5a"]
+[ext_resource type="Texture2D" uid="uid://bvfoy2xgmi56e" path="res://Assets/Sprite/Background/Rock3.png" id="23_0w3hc"]
+[ext_resource type="Texture2D" uid="uid://c3273hrq5s2bq" path="res://Assets/Sprite/Background/fog5.png" id="23_edyk4"]
+[ext_resource type="Texture2D" uid="uid://drk15t3mblx1b" path="res://Assets/Sprite/Background/fog10.png" id="23_fhnq7"]
+[ext_resource type="Texture2D" uid="uid://bmbddu2juevpy" path="res://Assets/Sprite/Background/fog20.png" id="23_qqh7k"]
+[ext_resource type="Texture2D" uid="uid://dbcem3bd2anq7" path="res://Assets/Sprite/Background/Rock1.png" id="24_dlbbq"]
+[ext_resource type="Texture2D" uid="uid://bkrol4erg0gr8" path="res://Assets/Sprite/Background/Rock2.png" id="25_smraw"]
+[ext_resource type="Texture2D" uid="uid://dvtactyyjvxyi" path="res://Assets/Sprite/Background/Flower1.png" id="26_76d6u"]
+[ext_resource type="Texture2D" uid="uid://dau5vxx8anhuc" path="res://Assets/Sprite/Background/Flower2.png" id="27_m4c75"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1q5dx"]
 size = Vector2(663, 20)
@@ -57,6 +85,171 @@ wait_time = 1.5
 
 [node name="Score" parent="." instance=ExtResource("6_l620p")]
 top_level = true
+offset_top = -8.0
+offset_bottom = -8.0
 metadata/_edit_group_ = true
 
+<<<<<<< Updated upstream
 [connection signal="timeout" from="Walls/SpawnTimer" to="Walls" method="_on_spawn_timer_timeout"]
+=======
+[node name="fifthBG" type="ParallaxBackground" parent="."]
+script = ExtResource("11_tui3u")
+
+[node name="cloud1" type="ParallaxLayer" parent="fifthBG"]
+motion_mirroring = Vector2(600, 0)
+
+[node name="Cloud1" type="Sprite2D" parent="fifthBG/cloud1"]
+position = Vector2(88, 352)
+texture = ExtResource("11_cusgc")
+
+[node name="cloud2" type="ParallaxLayer" parent="fifthBG"]
+motion_mirroring = Vector2(600, 0)
+
+[node name="Cloud2" type="Sprite2D" parent="fifthBG/cloud2"]
+position = Vector2(368, 344)
+texture = ExtResource("12_v581v")
+
+[node name="fourthBG" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="fourthBG"]
+
+[node name="Mountain1" type="Sprite2D" parent="fourthBG/ParallaxLayer"]
+position = Vector2(406.25, 542.75)
+scale = Vector2(1.01064, 1.1729)
+texture = ExtResource("11_eoc51")
+
+[node name="Mountain2" type="Sprite2D" parent="fourthBG/ParallaxLayer"]
+position = Vector2(696, 558.25)
+scale = Vector2(1.06667, 1.26712)
+texture = ExtResource("12_n6d8y")
+
+[node name="thirdBG" type="ParallaxBackground" parent="."]
+script = ExtResource("11_fslt7")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="thirdBG"]
+motion_mirroring = Vector2(800, 0)
+
+[node name="Grass-bg4" type="Sprite2D" parent="thirdBG/ParallaxLayer"]
+position = Vector2(608, 555.5)
+scale = Vector2(1, 0.790909)
+texture = ExtResource("12_1r5kl")
+
+[node name="Grass-bg3" type="Sprite2D" parent="thirdBG/ParallaxLayer"]
+position = Vector2(216, 552)
+scale = Vector2(1, 0.790909)
+texture = ExtResource("12_1r5kl")
+
+[node name="secondBG" type="ParallaxBackground" parent="."]
+script = ExtResource("11_yg1bc")
+
+[node name="grass2" type="ParallaxLayer" parent="secondBG"]
+motion_mirroring = Vector2(896, 0)
+
+[node name="Grass-bg2" type="Sprite2D" parent="secondBG/grass2"]
+position = Vector2(224, 557)
+scale = Vector2(1, 0.775862)
+texture = ExtResource("12_h2l24")
+
+[node name="Grass-bg3" type="Sprite2D" parent="secondBG/grass2"]
+position = Vector2(680, 557)
+scale = Vector2(1, 0.775862)
+texture = ExtResource("12_h2l24")
+
+[node name="firstBG" type="ParallaxBackground" parent="."]
+script = ExtResource("11_u4b21")
+
+[node name="grass" type="ParallaxLayer" parent="firstBG"]
+motion_mirroring = Vector2(896, 0)
+
+[node name="Grass-bg1-2" type="Sprite2D" parent="firstBG/grass"]
+position = Vector2(672, 554)
+scale = Vector2(1, 0.966667)
+texture = ExtResource("13_qxd5a")
+
+[node name="Grass-bg1" type="Sprite2D" parent="firstBG/grass"]
+position = Vector2(223.5, 560)
+scale = Vector2(1, 0.933333)
+texture = ExtResource("13_qxd5a")
+
+[node name="ground" type="ParallaxLayer" parent="firstBG"]
+motion_mirroring = Vector2(577, 0)
+
+[node name="Ground" type="Sprite2D" parent="firstBG/ground"]
+position = Vector2(288, 608)
+scale = Vector2(1.27363, 1.22727)
+texture = ExtResource("11_qteej")
+
+[node name="flower-rock" type="ParallaxLayer" parent="firstBG"]
+motion_mirroring = Vector2(1500, 0)
+
+[node name="Rock3" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(128, 600)
+texture = ExtResource("23_0w3hc")
+
+[node name="Rock8" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(1136, 600)
+texture = ExtResource("23_0w3hc")
+
+[node name="Rock1" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(32, 592)
+texture = ExtResource("24_dlbbq")
+
+[node name="Rock4" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(720, 592)
+texture = ExtResource("24_dlbbq")
+
+[node name="Rock6" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(1008, 592)
+texture = ExtResource("24_dlbbq")
+
+[node name="Rock2" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(272, 600)
+texture = ExtResource("25_smraw")
+
+[node name="Rock5" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(632, 600)
+texture = ExtResource("25_smraw")
+
+[node name="Rock7" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(432, 600)
+texture = ExtResource("25_smraw")
+
+[node name="Flower1" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(368, 592)
+texture = ExtResource("26_76d6u")
+
+[node name="Flower2" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(64, 592)
+texture = ExtResource("26_76d6u")
+
+[node name="Flower3" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(664, 592)
+texture = ExtResource("27_m4c75")
+
+[node name="Flower5" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(864, 592)
+texture = ExtResource("27_m4c75")
+
+[node name="Flower4" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(384, 592)
+texture = ExtResource("27_m4c75")
+
+[node name="FogContainer" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fog20" type="Sprite2D" parent="FogContainer"]
+position = Vector2(528, 504)
+scale = Vector2(1.30879, 1)
+texture = ExtResource("23_qqh7k")
+
+[node name="Fog10" type="Sprite2D" parent="FogContainer"]
+position = Vector2(520, 520)
+scale = Vector2(1.36041, 1.05172)
+texture = ExtResource("23_fhnq7")
+
+[node name="Fog5" type="Sprite2D" parent="FogContainer"]
+position = Vector2(524, 464)
+scale = Vector2(1.28352, 1.77778)
+texture = ExtResource("23_edyk4")
+>>>>>>> Stashed changes
