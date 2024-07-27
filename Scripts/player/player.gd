@@ -10,6 +10,7 @@ var is_dead = false
 var current_health: int = 3
 
 
+
 func _physics_process(delta):
 	var direction = Input.get_axis("Up", "Down")
 	print(direction)
@@ -18,14 +19,16 @@ func _physics_process(delta):
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 		anim.play("Idle")
+
 		#print(current_health)
+
 	
 	
 	move_and_slide()
 
+
 	if current_health <= 0 and is_dead == false :
-		is_dead = true
-		timer.start()
+
 		
 		
 func _on_timer_timeout():

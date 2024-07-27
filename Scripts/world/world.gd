@@ -1,3 +1,4 @@
+
 extends Node
 
 @export var plant_scene : PackedScene
@@ -216,6 +217,7 @@ func generate_little_up():
 	littleup.position.y = (screen_sizey)
 	add_child(littleup)
 	littlesup.append(littleup)	
+
 
 
 

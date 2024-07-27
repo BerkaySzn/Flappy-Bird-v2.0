@@ -1,18 +1,16 @@
-[gd_scene load_steps=17 format=3 uid="uid://c5cay1yu14acr"]
+
+
+[gd_scene load_steps=11 format=3 uid="uid://c5cay1yu14acr"]
+
 
 [ext_resource type="PackedScene" uid="uid://dmykjblh603b5" path="res://Scenes/player/player.tscn" id="1_6xkrl"]
 [ext_resource type="Script" path="res://Scripts/world/world.gd" id="1_d6y3b"]
-[ext_resource type="PackedScene" uid="uid://lal0lqsfkfnj" path="res://Scenes/walls/default_plant_down.tscn" id="2_7vg55"]
-[ext_resource type="PackedScene" uid="uid://cv253mnycoqho" path="res://Scenes/walls/default_plant_up.tscn" id="3_44mvb"]
-[ext_resource type="PackedScene" uid="uid://c2vyw6qd0rjrt" path="res://Scenes/walls/flame_plant_up.tscn" id="4_mnhb1"]
+[ext_resource type="PackedScene" uid="uid://mwl0uscplkve" path="res://Scenes/player/player_hud.tscn" id="2_btw8h"]
+[ext_resource type="Script" path="res://Scripts/walls/Walls.gd" id="3_8r77w"]
+[ext_resource type="PackedScene" uid="uid://bxdud24sv3kvb" path="res://Scenes/final_walls/default_plant_combination.tscn" id="3_te16u"]
 [ext_resource type="PackedScene" uid="uid://c4s2ollktqlqw" path="res://killzone.tscn" id="5_ct0u2"]
-[ext_resource type="PackedScene" uid="uid://bhjy8sdu54m2f" path="res://Scenes/walls/flame_plant_down.tscn" id="5_fatj8"]
-[ext_resource type="PackedScene" uid="uid://dr6r7rp6ylefy" path="res://Scenes/walls/fly_eater_up.tscn" id="6_du17t"]
 [ext_resource type="PackedScene" uid="uid://dvqu6smitx5xm" path="res://Scenes/score/score.tscn" id="6_l620p"]
-[ext_resource type="PackedScene" uid="uid://geqbyyi5brv4" path="res://Scenes/walls/fly_eater_down.tscn" id="7_g02p1"]
-[ext_resource type="PackedScene" uid="uid://b8v5sapqdf2oh" path="res://Scenes/walls/spiderup.tscn" id="8_2v2vy"]
-[ext_resource type="PackedScene" uid="uid://de46wyk3bxy26" path="res://Scenes/walls/littleup.tscn" id="9_gwltc"]
-[ext_resource type="PackedScene" uid="uid://cd1ss1t6j5dms" path="res://Scenes/walls/littledown.tscn" id="10_cv0gm"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1q5dx"]
 size = Vector2(663, 20)
@@ -25,19 +23,17 @@ size = Vector2(25.5, 345.5)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_d6y3b")
-plant_scene = ExtResource("2_7vg55")
-plant_scene2 = ExtResource("3_44mvb")
-flameeye_up_scn = ExtResource("4_mnhb1")
-flameeye_down_scn = ExtResource("5_fatj8")
-fly_eater_up_scn = ExtResource("6_du17t")
-fly_eater_down_scn = ExtResource("7_g02p1")
-spider_up_scn = ExtResource("8_2v2vy")
-little_up_scn = ExtResource("9_gwltc")
-little_down_scn = ExtResource("10_cv0gm")
+
+
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(524, 458)
 zoom = Vector2(2, 2)
+
+
+[node name="player_hud" parent="Camera2D" instance=ExtResource("2_btw8h")]
+position = Vector2(-524, -458)
+
 
 [node name="Player" parent="." instance=ExtResource("1_6xkrl")]
 position = Vector2(488, 448)
@@ -57,6 +53,165 @@ shape = SubResource("RectangleShape2D_lfht2")
 position = Vector2(154, -52)
 shape = SubResource("RectangleShape2D_88m3f")
 
-[node name="Score" parent="." instance=ExtResource("6_l620p")]
-top_level = true
-metadata/_edit_group_ = true
+
+[node name="fifthBG" type="ParallaxBackground" parent="."]
+script = ExtResource("11_tui3u")
+
+[node name="cloud1" type="ParallaxLayer" parent="fifthBG"]
+motion_mirroring = Vector2(600, 0)
+
+[node name="Cloud1" type="Sprite2D" parent="fifthBG/cloud1"]
+position = Vector2(88, 352)
+texture = ExtResource("11_cusgc")
+
+[node name="cloud2" type="ParallaxLayer" parent="fifthBG"]
+motion_mirroring = Vector2(600, 0)
+
+[node name="Cloud2" type="Sprite2D" parent="fifthBG/cloud2"]
+position = Vector2(368, 344)
+texture = ExtResource("12_v581v")
+
+[node name="fourthBG" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="fourthBG"]
+
+[node name="Mountain1" type="Sprite2D" parent="fourthBG/ParallaxLayer"]
+position = Vector2(406.25, 542.75)
+scale = Vector2(1.01064, 1.1729)
+texture = ExtResource("11_eoc51")
+
+[node name="Mountain2" type="Sprite2D" parent="fourthBG/ParallaxLayer"]
+position = Vector2(696, 558.25)
+scale = Vector2(1.06667, 1.26712)
+texture = ExtResource("12_n6d8y")
+
+[node name="thirdBG" type="ParallaxBackground" parent="."]
+script = ExtResource("11_fslt7")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="thirdBG"]
+motion_mirroring = Vector2(800, 0)
+
+[node name="Grass-bg4" type="Sprite2D" parent="thirdBG/ParallaxLayer"]
+position = Vector2(608, 555.5)
+scale = Vector2(1, 0.790909)
+texture = ExtResource("12_1r5kl")
+
+[node name="Grass-bg3" type="Sprite2D" parent="thirdBG/ParallaxLayer"]
+position = Vector2(216, 552)
+scale = Vector2(1, 0.790909)
+texture = ExtResource("12_1r5kl")
+
+[node name="secondBG" type="ParallaxBackground" parent="."]
+script = ExtResource("11_yg1bc")
+
+[node name="grass2" type="ParallaxLayer" parent="secondBG"]
+motion_mirroring = Vector2(896, 0)
+
+[node name="Grass-bg2" type="Sprite2D" parent="secondBG/grass2"]
+position = Vector2(224, 557)
+scale = Vector2(1, 0.775862)
+texture = ExtResource("12_h2l24")
+
+[node name="Grass-bg3" type="Sprite2D" parent="secondBG/grass2"]
+position = Vector2(680, 557)
+scale = Vector2(1, 0.775862)
+texture = ExtResource("12_h2l24")
+
+[node name="firstBG" type="ParallaxBackground" parent="."]
+script = ExtResource("11_u4b21")
+
+[node name="grass" type="ParallaxLayer" parent="firstBG"]
+motion_mirroring = Vector2(896, 0)
+
+[node name="Grass-bg1-2" type="Sprite2D" parent="firstBG/grass"]
+position = Vector2(672, 554)
+scale = Vector2(1, 0.966667)
+texture = ExtResource("13_qxd5a")
+
+[node name="Grass-bg1" type="Sprite2D" parent="firstBG/grass"]
+position = Vector2(223.5, 560)
+scale = Vector2(1, 0.933333)
+texture = ExtResource("13_qxd5a")
+
+[node name="ground" type="ParallaxLayer" parent="firstBG"]
+motion_mirroring = Vector2(577, 0)
+
+[node name="Ground" type="Sprite2D" parent="firstBG/ground"]
+position = Vector2(288, 608)
+scale = Vector2(1.27363, 1.22727)
+texture = ExtResource("11_qteej")
+
+[node name="flower-rock" type="ParallaxLayer" parent="firstBG"]
+motion_mirroring = Vector2(1500, 0)
+
+[node name="Rock3" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(128, 600)
+texture = ExtResource("23_0w3hc")
+
+[node name="Rock8" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(1136, 600)
+texture = ExtResource("23_0w3hc")
+
+[node name="Rock1" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(32, 592)
+texture = ExtResource("24_dlbbq")
+
+[node name="Rock4" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(720, 592)
+texture = ExtResource("24_dlbbq")
+
+[node name="Rock6" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(1008, 592)
+texture = ExtResource("24_dlbbq")
+
+[node name="Rock2" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(272, 600)
+texture = ExtResource("25_smraw")
+
+[node name="Rock5" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(632, 600)
+texture = ExtResource("25_smraw")
+
+[node name="Rock7" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(432, 600)
+texture = ExtResource("25_smraw")
+
+[node name="Flower1" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(368, 592)
+texture = ExtResource("26_76d6u")
+
+[node name="Flower2" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(64, 592)
+texture = ExtResource("26_76d6u")
+
+[node name="Flower3" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(664, 592)
+texture = ExtResource("27_m4c75")
+
+[node name="Flower5" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(864, 592)
+texture = ExtResource("27_m4c75")
+
+[node name="Flower4" type="Sprite2D" parent="firstBG/flower-rock"]
+position = Vector2(384, 592)
+texture = ExtResource("27_m4c75")
+
+[node name="FogContainer" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fog20" type="Sprite2D" parent="FogContainer"]
+position = Vector2(528, 504)
+scale = Vector2(1.30879, 1)
+texture = ExtResource("23_qqh7k")
+
+[node name="Fog10" type="Sprite2D" parent="FogContainer"]
+position = Vector2(520, 520)
+scale = Vector2(1.36041, 1.05172)
+texture = ExtResource("23_fhnq7")
+
+[node name="Fog5" type="Sprite2D" parent="FogContainer"]
+position = Vector2(524, 464)
+scale = Vector2(1.28352, 1.77778)
+texture = ExtResource("23_edyk4")
+
