@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c5cay1yu14acr"]
+[gd_scene load_steps=17 format=3 uid="uid://c5cay1yu14acr"]
 
 [ext_resource type="PackedScene" uid="uid://dmykjblh603b5" path="res://Scenes/player/player.tscn" id="1_6xkrl"]
 [ext_resource type="Script" path="res://Scripts/world/world.gd" id="1_d6y3b"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dr6r7rp6ylefy" path="res://Scenes/walls/fly_eater_up.tscn" id="6_du17t"]
 [ext_resource type="PackedScene" uid="uid://dvqu6smitx5xm" path="res://Scenes/score/score.tscn" id="6_l620p"]
 [ext_resource type="PackedScene" uid="uid://geqbyyi5brv4" path="res://Scenes/walls/fly_eater_down.tscn" id="7_g02p1"]
+[ext_resource type="PackedScene" uid="uid://b8v5sapqdf2oh" path="res://Scenes/walls/spiderup.tscn" id="8_2v2vy"]
+[ext_resource type="PackedScene" uid="uid://de46wyk3bxy26" path="res://Scenes/walls/littleup.tscn" id="9_gwltc"]
+[ext_resource type="PackedScene" uid="uid://cd1ss1t6j5dms" path="res://Scenes/walls/littledown.tscn" id="10_cv0gm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1q5dx"]
 size = Vector2(663, 20)
@@ -28,6 +31,9 @@ flameeye_up_scn = ExtResource("4_mnhb1")
 flameeye_down_scn = ExtResource("5_fatj8")
 fly_eater_up_scn = ExtResource("6_du17t")
 fly_eater_down_scn = ExtResource("7_g02p1")
+spider_up_scn = ExtResource("8_2v2vy")
+little_up_scn = ExtResource("9_gwltc")
+little_down_scn = ExtResource("10_cv0gm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(524, 458)

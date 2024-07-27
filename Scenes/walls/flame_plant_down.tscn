@@ -188,7 +188,7 @@ animations = [{
 [node name="flame_plant_down" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 60)
+position = Vector2(0, 50)
 sprite_frames = SubResource("SpriteFrames_iefmn")
 animation = &"swing"
 autoplay = "swing"
