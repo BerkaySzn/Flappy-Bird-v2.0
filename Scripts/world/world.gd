@@ -6,6 +6,9 @@ extends Node
 @export var flameeye_down_scn : PackedScene
 @export var fly_eater_up_scn: PackedScene
 @export var fly_eater_down_scn: PackedScene
+@export var spider_up_scn: PackedScene
+@export var little_up_scn: PackedScene
+@export var little_down_scn: PackedScene
 var random = RandomNumberGenerator.new()
 var random2 = RandomNumberGenerator.new()
 var timer = Timer.new()
@@ -23,6 +26,9 @@ var flamedowns: Array
 var flameups: Array
 var flyeatersup: Array
 var flyeatersdown: Array
+var spidersup: Array
+var littlesup: Array
+var littlesdown: Array
 const PLANT_DELAY : int = 0
 const PLANT_RANGE : int = 128	
 var randomup = RandomNumberGenerator.new()
@@ -51,12 +57,18 @@ func new_game():
 	get_tree().call_group("flameups", "queue_free")
 	get_tree().call_group("flyeatersup", "queue_free")
 	get_tree().call_group("flyeatersdown", "queue_free")
+	get_tree().call_group("spidersup", "queue_free")
+	get_tree().call_group("littlesup", "queue_free")
+	get_tree().call_group("littlesdown", "queue_free")
 	plants.clear()
 	plants2.clear()
 	flamedowns.clear()
 	flameups.clear()
 	flyeatersdown.clear()
 	flyeatersup.clear()
+	spidersup.clear()
+	littlesdown.clear()
+	littlesup.clear()
 
 
 
@@ -85,7 +97,12 @@ func _process(delta):
 			flyeaterdown.position.x -= SCROLL_SPEED	
 		for flyeaterup in flyeatersup:
 			flyeaterup.position.x -= SCROLL_SPEED	
-
+		for spiderup in spidersup:
+			spiderup.position.x -= SCROLL_SPEED	
+		for littleup in littlesup:
+			littleup.position.x -= SCROLL_SPEED	
+		for littledown in littlesdown:
+			littledown.position.x -= SCROLL_SPEED		
 func _on_timer_timeout():
 	random_wall_down()
 	timer.set_wait_time(random.randf_range(1,2))
@@ -102,7 +119,7 @@ func _on_timer2_timeout():
 	
 func random_wall_up():
 	randomup.randomize()
-	numup = randomup.randi_range(1,3)
+	numup = randomup.randi_range(1,5)
 
 	if numup==1:
 		generate_plants2()
@@ -110,16 +127,23 @@ func random_wall_up():
 		generate_flameup()
 	elif numup==3:
 		generate_fly_eater_up()
+	elif numup==4:
+		generate_spider_up()
+	elif numup==5:
+		generate_little_up()
 	
 func random_wall_down():
 	randomdown.randomize()
-	numdown = randomdown.randi_range(1,3)
+	numdown = randomdown.randi_range(1,4)
 	if numdown==1:
 		generate_plants()
 	elif numdown==2:
 		generate_flamedown()
 	elif numdown==3:
 		generate_fly_eater_down()
+	elif numdown==4:
+		generate_little_down()
+	
 func generate_plants():#alt
 	var plant = plant_scene.instantiate()
 	plant.position.x = screen_sizex + PLANT_DELAY
@@ -171,11 +195,27 @@ func generate_fly_eater_up():
 	add_child(flyeaterup)
 	flyeatersup.append(flyeaterup)
 
+func generate_spider_up():
+	var spiderup = spider_up_scn.instantiate()
+	spiderup.position.x = screen_sizex + PLANT_DELAY
+	spiderup.position.y = (screen_sizey)
+	add_child(spiderup)
+	spidersup.append(spiderup)
 
-	
+func generate_little_down():
+	var littledown = little_down_scn.instantiate()
+	littledown.position.x = screen_sizex + PLANT_DELAY
+	littledown.position.y = (screen_sizey)
+	add_child(littledown)
+	littlesdown.append(littledown)	
 
 
-
+func generate_little_up():
+	var littleup = little_up_scn.instantiate()
+	littleup.position.x = screen_sizex + PLANT_DELAY
+	littleup.position.y = (screen_sizey)
+	add_child(littleup)
+	littlesup.append(littleup)	
 
 
 
