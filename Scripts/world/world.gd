@@ -105,14 +105,14 @@ func _process(delta):
 			littledown.position.x -= SCROLL_SPEED		
 func _on_timer_timeout():
 	random_wall_down()
-	timer.set_wait_time(random.randf_range(1,2))
+	timer.set_wait_time(random.randf_range(0.7,1.2))
 	
 
 
 
 func _on_timer2_timeout():
 	random_wall_up()
-	timer2.set_wait_time(random2.randf_range(1,1.5))
+	timer2.set_wait_time(random2.randf_range(0.7,1.2))
 	
 
 
