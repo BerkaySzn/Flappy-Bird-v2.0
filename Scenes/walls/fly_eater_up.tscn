@@ -146,7 +146,7 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4, -62)
 sprite_frames = SubResource("SpriteFrames_tiwwq")
-animation = &"idle"
-autoplay = "idle"
+animation = &"attack"
+autoplay = "attack"
 offset = Vector2(0, -110)
 flip_v = true

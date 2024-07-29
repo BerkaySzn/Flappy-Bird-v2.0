@@ -143,10 +143,12 @@ animations = [{
 
 [node name="fly_eater_down" type="Node2D"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4, 50)
 sprite_frames = SubResource("SpriteFrames_3koa7")
-animation = &"idle"
-autoplay = "idle"
-frame = 1
-frame_progress = 0.131368
+animation = &"attack"
+autoplay = "attack"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

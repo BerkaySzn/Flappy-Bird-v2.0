@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cd1ss1t6j5dms"]
+[gd_scene load_steps=12 format=3 uid="uid://cd1ss1t6j5dms"]
 
 [ext_resource type="Texture2D" uid="uid://cle1y18ox33jy" path="res://Assets/Sprite/Envoriment/little.png" id="1_6ajos"]
 
@@ -52,9 +52,92 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_q2yys"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [PackedVector2Array(0, 116, 8, 99, 18, 82, 6, 60, -7, 59, -18, 75, -9, 116)]
+}
+
+[sub_resource type="Animation" id="Animation_dgotb"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(0, 116, 8, 99, 18, 82, 6, 60, -7, 59, -18, 75, -9, 116), PackedVector2Array(0, 116, 8, 99, 18, 82, 6, 60, -7, 59, -18, 75, -9, 116), PackedVector2Array(0, 116, 8, 99, 18, 82, 6, 60, -7, 59, -18, 75, -9, 116), PackedVector2Array(0, 116, 8, 99, 18, 82, 6, 60, -7, 59, -18, 75, -9, 116), PackedVector2Array(0, 116, 8, 99, 18, 82, 6, 60, -7, 59, -18, 75, -9, 116), PackedVector2Array(0, 116, 8, 99, 18, 82, 6, 60, -7, 59, -18, 75, -9, 116)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8bhap"]
+_data = {
+"RESET": SubResource("Animation_q2yys"),
+"idle": SubResource("Animation_dgotb")
+}
+
 [node name="littledown" type="Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 116, 8, 99, 18, 82, 6, 60, -7, 59, -18, 75, -9, 116)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 86)
 sprite_frames = SubResource("SpriteFrames_1bh7o")
-frame = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8bhap")
+}
+autoplay = "idle"
