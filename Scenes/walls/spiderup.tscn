@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b8v5sapqdf2oh"]
+[gd_scene load_steps=25 format=3 uid="uid://b8v5sapqdf2oh"]
 
 [ext_resource type="Texture2D" uid="uid://5vlryucx7plp" path="res://Assets/Sprite/Envoriment/omcek-Sheet.png" id="1_b2b46"]
 
@@ -150,7 +150,18 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="Animation" id="Animation_abu3a"]
+resource_name = "idle"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5m026"]
+_data = {
+"idle": SubResource("Animation_abu3a")
+}
+
 [node name="spiderup" type="Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_74nym")
@@ -158,3 +169,8 @@ autoplay = "default"
 frame = 17
 frame_progress = 0.769743
 offset = Vector2(0, -130)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5m026")
+}

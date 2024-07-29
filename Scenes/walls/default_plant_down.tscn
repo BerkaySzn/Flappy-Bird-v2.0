@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://lal0lqsfkfnj"]
+[gd_scene load_steps=15 format=3 uid="uid://lal0lqsfkfnj"]
 
 [ext_resource type="Texture2D" uid="uid://c23bmqgrmuwrj" path="res://Assets/Sprite/Envoriment/wall_tentacle.png" id="1_4qo0o"]
 
@@ -73,10 +73,94 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="Animation" id="Animation_cua37"]
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -16, 29, -8, 49, -6, 61, -15, 69, -21, 92, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -16, 29, -8, 49, -6, 61, -15, 69, -21, 92, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -12, 30, -7, 42, -11, 59, -15, 69, -21, 92, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -12, 30, -7, 42, -11, 59, -15, 69, -21, 92, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -12, 30, -7, 42, -11, 59, -19, 71, -21, 92, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -12, 30, -7, 42, -13, 59, -19, 71, -21, 92, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -12, 30, -7, 42, -13, 59, -19, 71, -21, 92, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -12, 30, -5, 52, -13, 59, -19, 71, -21, 92, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -12, 30, -5, 52, -13, 59, -19, 71, -21, 92, -21, 113)]
+}
+
+[sub_resource type="Animation" id="Animation_rtqkc"]
+resource_name = "idle"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(24, 115, 12, 88, 16, 60, 14, 42, -1, 23, 2, 3, 10, 7, 18, 9, 16, -2, 8, -8, 1, -12, -11, -4, -17, 16, -17, 29, -8, 49, -8, 55, -15, 69, -21, 92, -14, 108, -20, 114), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -16, 29, -8, 49, -8, 55, -15, 69, -17, 94, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 15, 10, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -10, 31, -6, 43, -8, 55, -20, 66, -18, 97, -21, 113), PackedVector2Array(27, 114, 8, 95, 5, 74, 16, 60, 17, 41, 3, 23, 0, 6, 5, 5, 15, 10, 10, -2, 4, -8, -5, -7, -13, 2, -16, 14, -16, 29, -9, 38, -8, 49, -8, 55, -20, 66, -15, 100, -16, 114), PackedVector2Array(23, 114, 3, 85, 10, 64, 17, 41, 3, 23, 0, 6, 5, 1, 10, -2, 4, -8, -5, -7, -13, 2, -16, 14, -16, 29, -10, 37, -8, 49, -12, 59, -20, 66, -17, 99, -15, 115), PackedVector2Array(28, 113, 11, 98, 5, 80, 16, 60, 17, 41, 3, 23, 2, 0, 15, 1, 4, -11, -6, -9, -13, 2, -16, 14, -12, 27, -9, 37, -8, 49, -16, 55, -20, 66, -18, 98, -16, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 17, 41, 3, 23, 0, 1, 12, 1, 8, -10, -7, -8, -13, 2, -16, 14, -16, 29, -8, 49, -12, 59, -20, 66, -16, 102, -16, 115), PackedVector2Array(28, 113, 12, 88, 16, 60, 17, 41, 3, 23, 0, 1, 12, 1, 6, -11, -7, -8, -13, 2, -16, 14, -16, 29, -8, 49, -12, 59, -20, 66, -21, 96, -21, 113), PackedVector2Array(28, 113, 12, 88, 16, 60, 17, 41, 3, 23, 0, 1, 12, 1, 6, -11, -7, -8, -13, 2, -16, 14, -16, 29, -8, 49, -12, 59, -20, 66, -21, 96, -21, 113)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w8cij"]
+_data = {
+"RESET": SubResource("Animation_cua37"),
+"idle": SubResource("Animation_rtqkc")
+}
+
 [node name="default_Plant_down" type="Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(28, 113, 12, 88, 16, 60, 14, 42, -1, 23, 0, 6, 5, 5, 11, 8, 10, -2, 4, -7, -3, -5, -12, 4, -15, 19, -16, 29, -8, 49, -6, 61, -15, 69, -21, 92, -21, 113)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 50)
 sprite_frames = SubResource("SpriteFrames_0kowi")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_w8cij")
+}
+autoplay = "RESET"

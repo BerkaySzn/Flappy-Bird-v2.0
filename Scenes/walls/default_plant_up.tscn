@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cv253mnycoqho"]
+[gd_scene load_steps=15 format=3 uid="uid://cv253mnycoqho"]
 
 [ext_resource type="Texture2D" uid="uid://c23bmqgrmuwrj" path="res://Assets/Sprite/Envoriment/wall_tentacle.png" id="1_6up3q"]
 
@@ -73,14 +73,98 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="Animation" id="Animation_le2iq"]
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [PackedVector2Array(15, 119, 19, 86, 7, 63, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120)]
+}
+
+[sub_resource type="Animation" id="Animation_jkvkd"]
+resource_name = "idle"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(16, 120, 21, 86, 7, 63, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -15, 75, -6.99999, 88, -25, 120), PackedVector2Array(15, 119, 19, 86, 7, 63, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120), PackedVector2Array(15, 119, 19, 86, 16, 66, 5, 53, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120), PackedVector2Array(15, 119, 19, 86, 16, 66, 5, 53, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120), PackedVector2Array(15, 119, 19, 86, 16, 66, 5, 53, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120), PackedVector2Array(15, 119, 19, 86, 16, 66, 5, 53, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120), PackedVector2Array(15, 119, 19, 86, 16, 66, 5, 53, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120), PackedVector2Array(15, 119, 19, 86, 16, 66, 5, 53, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120), PackedVector2Array(15, 119, 19, 86, 16, 66, 5, 53, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h4clv"]
+_data = {
+"RESET": SubResource("Animation_le2iq"),
+"idle": SubResource("Animation_jkvkd")
+}
+
 [node name="default_plant_up" type="Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-4.76837e-07, -118)
+rotation = 3.14159
+polygon = PackedVector2Array(15, 119, 19, 86, 7, 63, 14, 34, 15, 12, 10, 0.999985, 0.999999, -6.00002, -8, -2.00002, -13, 4.99998, -13, 15, -4, 8.99998, -0.999998, 29, -15, 51, -8.99999, 83, -5.99999, 100, -25, 120)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_0kowi")
 animation = &"idle"
 autoplay = "idle"
-frame = 3
-frame_progress = 0.106143
 offset = Vector2(0, -110)
 flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h4clv")
+}
+autoplay = "RESET"

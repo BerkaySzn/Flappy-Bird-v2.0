@@ -1,0 +1,591 @@
+[gd_scene load_steps=130 format=3 uid="uid://c60lyxiqg77m2"]
+
+[ext_resource type="Script" path="res://Scripts/menu/menu.gd" id="1_oe3k3"]
+[ext_resource type="Shader" path="res://Shaders/main_menu.gdshader" id="1_uaxoi"]
+[ext_resource type="Texture2D" uid="uid://yvyh4h7kmkeu" path="res://Assets/Sprite/Background/Hive.png" id="2_2q4th"]
+[ext_resource type="Shader" path="res://Shaders/vignette.gdshader" id="4_hjjut"]
+[ext_resource type="Texture2D" uid="uid://coxwj5527botk" path="res://Assets/Sprite/Background/Grass/GrassRender000.png" id="4_mbiew"]
+[ext_resource type="Texture2D" uid="uid://b4xoakq5cb7mk" path="res://Assets/Sprite/Background/Grass/GrassRender001.png" id="5_n272c"]
+[ext_resource type="Texture2D" uid="uid://wsay0n63wvv0" path="res://Assets/Sprite/Background/Grass/GrassRender002.png" id="6_xv37n"]
+[ext_resource type="Texture2D" uid="uid://b7vtyochqnxeo" path="res://Assets/Sprite/Background/Grass/GrassRender003.png" id="7_mdj56"]
+[ext_resource type="Texture2D" uid="uid://d4gfllr7r04he" path="res://Assets/Sprite/Background/Grass/GrassRender004.png" id="8_hwx7t"]
+[ext_resource type="Texture2D" uid="uid://ci1i18e3bdmjx" path="res://Assets/Sprite/Background/Grass/GrassRender005.png" id="9_wnmkb"]
+[ext_resource type="Texture2D" uid="uid://cbkgf358disuf" path="res://Assets/Sprite/Background/Grass/GrassRender006.png" id="10_ecg25"]
+[ext_resource type="Texture2D" uid="uid://j1mqp1m0mb07" path="res://Assets/Sprite/Background/Grass/GrassRender007.png" id="11_6r7tl"]
+[ext_resource type="Texture2D" uid="uid://chh5rw3hc2ctx" path="res://Assets/Sprite/Background/Grass/GrassRender008.png" id="12_cca6j"]
+[ext_resource type="Texture2D" uid="uid://txwh8gogc6qy" path="res://Assets/Sprite/Background/Grass/GrassRender009.png" id="13_irgj1"]
+[ext_resource type="Texture2D" uid="uid://cqk7rhpreuivk" path="res://Assets/Sprite/Background/Grass/GrassRender010.png" id="14_mkiod"]
+[ext_resource type="Texture2D" uid="uid://usysjt6wwvte" path="res://Assets/Sprite/Background/Grass/GrassRender011.png" id="15_fhwl1"]
+[ext_resource type="Texture2D" uid="uid://d3b43wwrft64p" path="res://Assets/Sprite/Background/Grass/GrassRender012.png" id="16_8nuhd"]
+[ext_resource type="Texture2D" uid="uid://bvtb1hm8loemg" path="res://Assets/Sprite/Background/Grass/GrassRender013.png" id="17_7y66a"]
+[ext_resource type="Texture2D" uid="uid://b8am13vckl8n1" path="res://Assets/Sprite/Background/Grass/GrassRender014.png" id="18_hgw6f"]
+[ext_resource type="Texture2D" uid="uid://b4xxfrdhxabbc" path="res://Assets/Sprite/Background/Grass/GrassRender015.png" id="19_bjqdv"]
+[ext_resource type="Texture2D" uid="uid://djw542c21wtaw" path="res://Assets/Sprite/Background/Grass/GrassRender016.png" id="20_mxw3m"]
+[ext_resource type="Texture2D" uid="uid://b6coh0dra352o" path="res://Assets/Sprite/Background/Grass/GrassRender017.png" id="21_iy5ok"]
+[ext_resource type="Texture2D" uid="uid://c07bydxgj6rwo" path="res://Assets/Sprite/Background/Grass/GrassRender018.png" id="22_wkbd2"]
+[ext_resource type="Texture2D" uid="uid://c3j2lffodwnm8" path="res://Assets/Sprite/Background/Grass/GrassRender019.png" id="23_wlksl"]
+[ext_resource type="Texture2D" uid="uid://btgph8laexagk" path="res://Assets/Sprite/Background/Grass/GrassRender020.png" id="24_a4yce"]
+[ext_resource type="Texture2D" uid="uid://cbyejeq2jv7ox" path="res://Assets/Sprite/Background/Grass/GrassRender021.png" id="25_0xxq2"]
+[ext_resource type="Texture2D" uid="uid://cnhe6sqmv16pd" path="res://Assets/Sprite/Background/Grass/GrassRender022.png" id="26_twps6"]
+[ext_resource type="Texture2D" uid="uid://d28atecnypyf4" path="res://Assets/Sprite/Background/Grass/GrassRender023.png" id="27_yg0ml"]
+[ext_resource type="Texture2D" uid="uid://b8anw641u2du4" path="res://Assets/Sprite/Background/Grass/GrassRender024.png" id="28_3fb1u"]
+[ext_resource type="Texture2D" uid="uid://bemy7geuc5kd7" path="res://Assets/Sprite/Background/Grass/GrassRender025.png" id="29_22cmu"]
+[ext_resource type="Texture2D" uid="uid://bvy1isyi7osvm" path="res://Assets/Sprite/Background/Grass/GrassRender026.png" id="30_plsda"]
+[ext_resource type="Texture2D" uid="uid://b8cluyboajxps" path="res://Assets/Sprite/Background/Grass/GrassRender027.png" id="31_7b6bm"]
+[ext_resource type="Texture2D" uid="uid://ddyao513lpjk8" path="res://Assets/Sprite/Background/Grass/GrassRender028.png" id="32_pthlk"]
+[ext_resource type="Texture2D" uid="uid://knanljh1ba3e" path="res://Assets/Sprite/Background/Grass/GrassRender029.png" id="33_543yx"]
+[ext_resource type="Texture2D" uid="uid://dkfeaq7bu33s0" path="res://Assets/Sprite/Background/Grass/GrassRender030.png" id="34_tlixo"]
+[ext_resource type="Texture2D" uid="uid://vjj8oltalbh7" path="res://Assets/Sprite/Background/Grass/GrassRender031.png" id="35_rahah"]
+[ext_resource type="Texture2D" uid="uid://cla2cm54opoir" path="res://Assets/Sprite/Background/Grass/GrassRender032.png" id="36_sx77c"]
+[ext_resource type="Texture2D" uid="uid://vf0vaosgp15k" path="res://Assets/Sprite/Background/Grass/GrassRender033.png" id="37_xfhl8"]
+[ext_resource type="Texture2D" uid="uid://b78vdjptqs80i" path="res://Assets/Sprite/Background/Grass/GrassRender034.png" id="38_kik0i"]
+[ext_resource type="Texture2D" uid="uid://fa8huyn1oypr" path="res://Assets/Sprite/Background/Grass/GrassRender035.png" id="39_vxwvp"]
+[ext_resource type="Texture2D" uid="uid://ctq1ejgs61l77" path="res://Assets/Sprite/Background/Grass/GrassRender036.png" id="40_152qr"]
+[ext_resource type="Texture2D" uid="uid://s7yegmyfr5h6" path="res://Assets/Sprite/Background/Grass/GrassRender037.png" id="41_wyuse"]
+[ext_resource type="Texture2D" uid="uid://ctiog88ac03he" path="res://Assets/Sprite/Background/Grass/GrassRender038.png" id="42_vb2ef"]
+[ext_resource type="Texture2D" uid="uid://dplli8s6fvnhb" path="res://Assets/Sprite/Background/Grass/GrassRender039.png" id="43_nmp7u"]
+[ext_resource type="Texture2D" uid="uid://c8gvsa8vf0pk3" path="res://Assets/Sprite/Background/Grass/GrassRender040.png" id="44_o1jxu"]
+[ext_resource type="Texture2D" uid="uid://db10m3lcaj62q" path="res://Assets/Sprite/Background/Grass/GrassRender041.png" id="45_aexht"]
+[ext_resource type="Texture2D" uid="uid://dht8w6u1u7jv7" path="res://Assets/Sprite/Background/Grass/GrassRender042.png" id="46_yesuh"]
+[ext_resource type="Texture2D" uid="uid://cav64b78p3c6f" path="res://Assets/Sprite/Background/Grass/GrassRender043.png" id="47_aejiu"]
+[ext_resource type="Texture2D" uid="uid://bv7uu0qf7i5cn" path="res://Assets/Sprite/Background/Grass/GrassRender044.png" id="48_tt6rk"]
+[ext_resource type="Texture2D" uid="uid://caqhisnjmy4tv" path="res://Assets/Sprite/Background/Grass/GrassRender045.png" id="49_jaofc"]
+[ext_resource type="Texture2D" uid="uid://csbxv84r42vny" path="res://Assets/Sprite/Background/Grass/GrassRender046.png" id="50_6l47e"]
+[ext_resource type="Texture2D" uid="uid://dj5fg1mgxk7w7" path="res://Assets/Sprite/Background/Grass/GrassRender047.png" id="51_ud8nm"]
+[ext_resource type="Texture2D" uid="uid://cilw7r6w45og1" path="res://Assets/Sprite/Background/Grass/GrassRender048.png" id="52_nj825"]
+[ext_resource type="Texture2D" uid="uid://5at3lp33t0ja" path="res://Assets/Sprite/Background/Grass/GrassRender049.png" id="53_aiey1"]
+[ext_resource type="Texture2D" uid="uid://benli6gcprh4e" path="res://Assets/Sprite/Background/Grass/GrassRender050.png" id="54_onxd8"]
+[ext_resource type="Texture2D" uid="uid://c15s3qhm5vs24" path="res://Assets/Sprite/Background/Grass/GrassRender051.png" id="55_56kgu"]
+[ext_resource type="Texture2D" uid="uid://jigc0jwad6mk" path="res://Assets/Sprite/Background/Grass/GrassRender052.png" id="56_ja75y"]
+[ext_resource type="Texture2D" uid="uid://dtwhtsnwitcjy" path="res://Assets/Sprite/Background/Grass/GrassRender053.png" id="57_wll12"]
+[ext_resource type="Texture2D" uid="uid://cbopy3vg7ykk1" path="res://Assets/Sprite/Background/Grass/GrassRender054.png" id="58_kaexp"]
+[ext_resource type="Texture2D" uid="uid://de8pubphcv5ia" path="res://Assets/Sprite/Background/Grass/GrassRender055.png" id="59_ochel"]
+[ext_resource type="Texture2D" uid="uid://dd2ev8p4hhk2b" path="res://Assets/Sprite/Background/Grass/GrassRender056.png" id="60_k35ua"]
+[ext_resource type="Texture2D" uid="uid://dutg3mu1si6n3" path="res://Assets/Sprite/Background/Grass/GrassRender057.png" id="61_4o85d"]
+[ext_resource type="Texture2D" uid="uid://cduxkdfh64h7r" path="res://Assets/Sprite/Background/Grass/GrassRender058.png" id="62_o0qr2"]
+[ext_resource type="Texture2D" uid="uid://25vfwxsqn3bd" path="res://Assets/Sprite/Background/Grass/GrassRender059.png" id="63_cxebx"]
+[ext_resource type="Texture2D" uid="uid://bym1i2tn5mxeg" path="res://Assets/Sprite/Background/Grass/GrassRender060.png" id="64_t6w67"]
+[ext_resource type="Texture2D" uid="uid://n5p435bqi47t" path="res://Assets/Sprite/Background/Grass/GrassRender061.png" id="65_n0k7v"]
+[ext_resource type="Texture2D" uid="uid://6wbvyqrofpb3" path="res://Assets/Sprite/Background/Grass/GrassRender062.png" id="66_8fsa7"]
+[ext_resource type="Texture2D" uid="uid://cx5s6xjs13v7u" path="res://Assets/Sprite/Background/Grass/GrassRender063.png" id="67_hj252"]
+[ext_resource type="Texture2D" uid="uid://c3eu77he0roq6" path="res://Assets/Sprite/Background/Grass/GrassRender064.png" id="68_cebxi"]
+[ext_resource type="Texture2D" uid="uid://dm13i6puiqy64" path="res://Assets/Sprite/Background/Grass/GrassRender065.png" id="69_82rnk"]
+[ext_resource type="Texture2D" uid="uid://cnsjnscd44avi" path="res://Assets/Sprite/Background/Grass/GrassRender066.png" id="70_r5bj1"]
+[ext_resource type="Texture2D" uid="uid://cn4fxe3tvo86o" path="res://Assets/Sprite/Background/Grass/GrassRender067.png" id="71_o7tkp"]
+[ext_resource type="Texture2D" uid="uid://c0o0q1rh5d6ke" path="res://Assets/Sprite/Background/Grass/GrassRender068.png" id="72_we1tn"]
+[ext_resource type="Texture2D" uid="uid://3n4iwxs3cgg5" path="res://Assets/Sprite/Background/Grass/GrassRender069.png" id="73_gu4lo"]
+[ext_resource type="Texture2D" uid="uid://6hqifqaldo54" path="res://Assets/Sprite/Background/Grass/GrassRender070.png" id="74_jrl82"]
+[ext_resource type="Texture2D" uid="uid://db0yh21j5p3k0" path="res://Assets/Sprite/Background/Grass/GrassRender071.png" id="75_r8fka"]
+[ext_resource type="Texture2D" uid="uid://b7ei23qu3y75x" path="res://Assets/Sprite/Background/Grass/GrassRender072.png" id="76_i2s1f"]
+[ext_resource type="Texture2D" uid="uid://w6nun842mn6h" path="res://Assets/Sprite/Background/Grass/GrassRender073.png" id="77_s26od"]
+[ext_resource type="Texture2D" uid="uid://dk0gqfavnin20" path="res://Assets/Sprite/Background/Grass/GrassRender074.png" id="78_2t8ea"]
+[ext_resource type="Texture2D" uid="uid://cdfbedge5cudb" path="res://Assets/Sprite/Background/Grass/GrassRender075.png" id="79_w47d4"]
+[ext_resource type="Texture2D" uid="uid://dxdi4r6340kym" path="res://Assets/Sprite/Background/Grass/GrassRender076.png" id="80_4uavf"]
+[ext_resource type="Texture2D" uid="uid://cphh8mnypgm42" path="res://Assets/Sprite/Background/Grass/GrassRender077.png" id="81_v1bhf"]
+[ext_resource type="Texture2D" uid="uid://cmo4a53kq8ifh" path="res://Assets/Sprite/Background/Grass/GrassRender078.png" id="82_dhh4d"]
+[ext_resource type="Texture2D" uid="uid://co1j7voasqvsq" path="res://Assets/Sprite/Background/Grass/GrassRender079.png" id="83_q42de"]
+[ext_resource type="Texture2D" uid="uid://b1n2f1y1v1brb" path="res://Assets/Sprite/Background/Grass/GrassRender080.png" id="84_nw86l"]
+[ext_resource type="Texture2D" uid="uid://offfbtrsjweb" path="res://Assets/Sprite/Background/Grass/GrassRender081.png" id="85_182rd"]
+[ext_resource type="Texture2D" uid="uid://vhh1ivjc2xle" path="res://Assets/Sprite/Background/Grass/GrassRender082.png" id="86_33vvn"]
+[ext_resource type="Texture2D" uid="uid://b845e5s008av7" path="res://Assets/Sprite/Background/Grass/GrassRender083.png" id="87_tjav2"]
+[ext_resource type="Texture2D" uid="uid://jun8m7plgsa0" path="res://Assets/Sprite/Background/Grass/GrassRender084.png" id="88_4psns"]
+[ext_resource type="Texture2D" uid="uid://b188qcb7eb6na" path="res://Assets/Sprite/Background/Grass/GrassRender085.png" id="89_uckip"]
+[ext_resource type="Texture2D" uid="uid://ck008d6xaoyul" path="res://Assets/Sprite/Background/Logo_NoGlow.png" id="90_e4eeh"]
+[ext_resource type="Texture2D" uid="uid://b3w4d8idwrv5p" path="res://Assets/Sprite/Background/Grass/GrassRender086.png" id="90_ry61f"]
+[ext_resource type="Texture2D" uid="uid://diuhp1di0fnmy" path="res://Assets/Sprite/Background/Grass/GrassRender087.png" id="91_8ml7a"]
+[ext_resource type="Texture2D" uid="uid://bgahk3104wjp7" path="res://Assets/Sprite/Background/Grass/GrassRender088.png" id="92_c1rtd"]
+[ext_resource type="Texture2D" uid="uid://dqgyg0v8civn0" path="res://Assets/Sprite/Background/Grass/GrassRender089.png" id="93_gisvv"]
+[ext_resource type="Texture2D" uid="uid://e67aeojojgye" path="res://Assets/Sprite/Background/Grass/GrassRender090.png" id="94_qkb5j"]
+[ext_resource type="Texture2D" uid="uid://bnrmk01ylrh5d" path="res://Assets/Sprite/Background/Grass/GrassRender091.png" id="95_gqpgj"]
+[ext_resource type="Texture2D" uid="uid://of5ww6owtv2q" path="res://Assets/Sprite/Background/Grass/GrassRender092.png" id="96_tqqeg"]
+[ext_resource type="Texture2D" uid="uid://bqoquxqtg65th" path="res://Assets/Sprite/Background/Grass/GrassRender093.png" id="97_hv76g"]
+[ext_resource type="Texture2D" uid="uid://borkbwq1hr8q3" path="res://Assets/Sprite/Background/Grass/GrassRender094.png" id="98_mciqg"]
+[ext_resource type="Texture2D" uid="uid://o2rxukabikc8" path="res://Assets/Sprite/Background/Grass/GrassRender095.png" id="99_h5esf"]
+[ext_resource type="Texture2D" uid="uid://bup0jojg4g37c" path="res://Assets/Sprite/Background/Grass/GrassRender096.png" id="100_0r1cy"]
+[ext_resource type="Texture2D" uid="uid://5rdwe042lyib" path="res://Assets/Sprite/Background/Grass/GrassRender097.png" id="101_u6nwy"]
+[ext_resource type="Texture2D" uid="uid://cp5cjshdebh2d" path="res://Assets/Sprite/Background/Grass/GrassRender098.png" id="102_v5pw1"]
+[ext_resource type="Texture2D" uid="uid://cdco4c7pq2ojr" path="res://Assets/Sprite/Background/Grass/GrassRender099.png" id="103_tme0n"]
+[ext_resource type="Texture2D" uid="uid://cx1x5oim34k5b" path="res://Assets/Sprite/Background/Grass/GrassRender100.png" id="104_53jlt"]
+[ext_resource type="Texture2D" uid="uid://cj6kqxjl4iy2l" path="res://Assets/Sprite/Background/Grass/GrassRender101.png" id="105_wgnc5"]
+[ext_resource type="Texture2D" uid="uid://dku3ap3iaiwm0" path="res://Assets/Sprite/Background/Grass/GrassRender102.png" id="106_soves"]
+[ext_resource type="Texture2D" uid="uid://bic25gttyva44" path="res://Assets/Sprite/Background/Grass/GrassRender103.png" id="107_bga6l"]
+[ext_resource type="Texture2D" uid="uid://bvpp64tjdh2ih" path="res://Assets/Sprite/Background/Grass/GrassRender104.png" id="108_phji3"]
+[ext_resource type="Texture2D" uid="uid://ceghmtkb0t85c" path="res://Assets/Sprite/Background/Grass/GrassRender105.png" id="109_dyge0"]
+[ext_resource type="Texture2D" uid="uid://bk4rb1e1nf71x" path="res://Assets/Sprite/Background/Grass/GrassRender106.png" id="110_lhdk5"]
+[ext_resource type="Texture2D" uid="uid://chrjk7gpl7f4o" path="res://Assets/Sprite/Background/Grass/GrassRender107.png" id="111_efrmm"]
+[ext_resource type="Texture2D" uid="uid://bvugb351l60w8" path="res://Assets/Sprite/Background/Grass/GrassRender108.png" id="112_jfa50"]
+[ext_resource type="Texture2D" uid="uid://bjhc7dacphypp" path="res://Assets/Sprite/Background/Grass/GrassRender109.png" id="113_1f4a4"]
+[ext_resource type="Texture2D" uid="uid://vlvl1puhv1mq" path="res://Assets/Sprite/Background/Grass/GrassRender110.png" id="114_6khb2"]
+[ext_resource type="Texture2D" uid="uid://dfcqdli4ejw52" path="res://Assets/Sprite/Background/Grass/GrassRender111.png" id="115_pe46q"]
+[ext_resource type="Texture2D" uid="uid://dj7x6m3ar7fhw" path="res://Assets/Sprite/Background/Grass/GrassRender112.png" id="116_wakfu"]
+[ext_resource type="Texture2D" uid="uid://pf5dm26e5a12" path="res://Assets/Sprite/Background/Grass/GrassRender113.png" id="117_xhyri"]
+[ext_resource type="Texture2D" uid="uid://bh63ixm2hea8g" path="res://Assets/Sprite/Background/Grass/GrassRender114.png" id="118_ehywb"]
+[ext_resource type="Texture2D" uid="uid://bkinefpylxbbr" path="res://Assets/Sprite/Background/Grass/GrassRender115.png" id="119_fudpx"]
+[ext_resource type="Texture2D" uid="uid://cu8mg8bjcmgty" path="res://Assets/Sprite/Background/Grass/GrassRender116.png" id="120_oobqq"]
+[ext_resource type="Texture2D" uid="uid://dc37i7yj76ri2" path="res://Assets/Sprite/Background/Grass/GrassRender117.png" id="121_gagbs"]
+[ext_resource type="Texture2D" uid="uid://cghr0x8wjakfw" path="res://Assets/Sprite/Background/Grass/GrassRender118.png" id="122_arqlj"]
+[ext_resource type="Texture2D" uid="uid://bc8pjdjpwdjvf" path="res://Assets/Sprite/Background/Grass/GrassRender119.png" id="123_8wehb"]
+[ext_resource type="FontFile" uid="uid://bxy7h0m1e088m" path="res://Assets/Font/GrapeSoda.ttf" id="126_808y4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_exrvv"]
+shader = ExtResource("1_uaxoi")
+shader_parameter/tiling = Vector2(1, 1)
+shader_parameter/offset = Vector2(1, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4uup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mbiew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n272c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xv37n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mdj56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hwx7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wnmkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ecg25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6r7tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cca6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_irgj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mkiod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fhwl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8nuhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7y66a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hgw6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bjqdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mxw3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_iy5ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_wkbd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wlksl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_a4yce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0xxq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_twps6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_yg0ml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3fb1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_22cmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_plsda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7b6bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pthlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_543yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_tlixo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_rahah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_sx77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_xfhl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_kik0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_vxwvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_152qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_wyuse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_vb2ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_nmp7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_o1jxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_aexht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_yesuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_aejiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_tt6rk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_jaofc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_6l47e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ud8nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_nj825")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_aiey1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_onxd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_56kgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ja75y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_wll12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_kaexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ochel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_k35ua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_4o85d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_o0qr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_cxebx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_t6w67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_n0k7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_8fsa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_hj252")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_cebxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_82rnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_r5bj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_o7tkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_we1tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_gu4lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_jrl82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_r8fka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_i2s1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_s26od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_2t8ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_w47d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_4uavf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_v1bhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_dhh4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_q42de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_nw86l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_182rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_33vvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_tjav2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_4psns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_uckip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_ry61f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_8ml7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_c1rtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_gisvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_qkb5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_gqpgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_tqqeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_hv76g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_mciqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_h5esf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_0r1cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_u6nwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_v5pw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_tme0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_53jlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_wgnc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_soves")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_bga6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_phji3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_dyge0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_lhdk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_efrmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_jfa50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_1f4a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_6khb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_pe46q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_wakfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_xhyri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_ehywb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_fudpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_oobqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_gagbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_arqlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_8wehb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 15.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_30u16"]
+shader = ExtResource("4_hjjut")
+shader_parameter/player_position = Vector2(0.5, 0)
+shader_parameter/color = Color(0.129412, 0.129412, 0.137255, 0.698039)
+shader_parameter/MULTIPLIER = 0.5
+shader_parameter/SCALE = 0.4
+shader_parameter/SOFTNESS = 1.0
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_oe3k3")
+
+[node name="ScrollingBack" type="Sprite2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_exrvv")
+position = Vector2(589, 309)
+scale = Vector2(2, 2)
+texture = ExtResource("2_2q4th")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(578, 241)
+scale = Vector2(-2.5, -2.5)
+sprite_frames = SubResource("SpriteFrames_h4uup")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(573, 296)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_h4uup")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(574, 209)
+scale = Vector2(3, 3)
+texture = ExtResource("90_e4eeh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_30u16")
+layout_mode = 0
+offset_left = -37.0
+offset_top = -15.0
+offset_right = 1188.0
+offset_bottom = 676.0
+mouse_filter = 1
+color = Color(0.129412, 0.129412, 0.137255, 0.701961)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 384.0
+offset_right = 695.0
+offset_bottom = 597.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("126_808y4")
+theme_override_font_sizes/font_size = 48
+text = "Start"
+flat = true
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("126_808y4")
+theme_override_font_sizes/font_size = 48
+text = "Options"
+flat = true
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("126_808y4")
+theme_override_font_sizes/font_size = 48
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
