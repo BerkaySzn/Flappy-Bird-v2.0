@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c5cay1yu14acr"]
+[gd_scene load_steps=37 format=3 uid="uid://c5cay1yu14acr"]
 
 [ext_resource type="PackedScene" uid="uid://dmykjblh603b5" path="res://Scenes/player/player.tscn" id="1_6xkrl"]
 [ext_resource type="Script" path="res://Scripts/world/world.gd" id="1_d6y3b"]
@@ -13,6 +13,26 @@
 [ext_resource type="PackedScene" uid="uid://b8v5sapqdf2oh" path="res://Scenes/walls/spiderup.tscn" id="8_2v2vy"]
 [ext_resource type="PackedScene" uid="uid://de46wyk3bxy26" path="res://Scenes/walls/littleup.tscn" id="9_gwltc"]
 [ext_resource type="PackedScene" uid="uid://cd1ss1t6j5dms" path="res://Scenes/walls/littledown.tscn" id="10_cv0gm"]
+[ext_resource type="Texture2D" uid="uid://k7vrik6qnxjm" path="res://Assets/Sprite/Background/World Background/sky.png" id="14_3ogqv"]
+[ext_resource type="Texture2D" uid="uid://crf41nv5jqhm" path="res://Assets/Sprite/Background/World Background/Ground.png" id="14_co8tq"]
+[ext_resource type="Script" path="res://Scripts/world/GrassBg2.gd" id="14_dbylw"]
+[ext_resource type="Texture2D" uid="uid://04rs0p8mkoo" path="res://Assets/Sprite/Background/World Background/Mountain1.png" id="14_jnxmh"]
+[ext_resource type="Script" path="res://Scripts/world/Ground.gd" id="14_v2452"]
+[ext_resource type="Script" path="res://Scripts/world/GrassBg1.gd" id="14_xafin"]
+[ext_resource type="Texture2D" uid="uid://1plouh8hdh8x" path="res://Assets/Sprite/Background/World Background/grass-bg3.png" id="15_lglvv"]
+[ext_resource type="Texture2D" uid="uid://b0g587a068m2r" path="res://Assets/Sprite/Background/World Background/Mountain2.png" id="15_w2aej"]
+[ext_resource type="Texture2D" uid="uid://g7merxvjxra5" path="res://Assets/Sprite/Background/World Background/grass-bg2.png" id="15_w86my"]
+[ext_resource type="Script" path="res://Scripts/world/Cloud1.gd" id="16_nttxl"]
+[ext_resource type="Script" path="res://Scripts/world/env_object_spawner.gd" id="16_rmjqr"]
+[ext_resource type="Script" path="res://Scripts/world/Cloud2.gd" id="16_sstdg"]
+[ext_resource type="PackedScene" uid="uid://c1d061pk6vxqs" path="res://Scenes/env_objects/flower_1.tscn" id="17_p4g62"]
+[ext_resource type="Texture2D" uid="uid://cyhmsr3yrdmc8" path="res://Assets/Sprite/Background/World Background/Cloud1.png" id="17_r8r2i"]
+[ext_resource type="Texture2D" uid="uid://rssqv5fv07ai" path="res://Assets/Sprite/Background/World Background/Cloud2.png" id="17_xsxul"]
+[ext_resource type="PackedScene" uid="uid://bby82libuwacw" path="res://Scenes/env_objects/flower_2.tscn" id="18_jx51c"]
+[ext_resource type="PackedScene" uid="uid://bb2whbvmxqw1y" path="res://Scenes/env_objects/rock_1.tscn" id="19_ryibq"]
+[ext_resource type="PackedScene" uid="uid://b3ayng6aqo74x" path="res://Scenes/env_objects/rock_2.tscn" id="20_qy5yd"]
+[ext_resource type="PackedScene" uid="uid://5kj5j0nsvtf5" path="res://Scenes/env_objects/rock_3.tscn" id="21_aqp0v"]
+[ext_resource type="Texture2D" uid="uid://cjg1njrgierw" path="res://Assets/Sprite/Background/World Background/grass-bg1.png" id="22_6yk40"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1q5dx"]
 size = Vector2(663, 20)
@@ -60,3 +80,116 @@ shape = SubResource("RectangleShape2D_88m3f")
 [node name="Score" parent="." instance=ExtResource("6_l620p")]
 top_level = true
 metadata/_edit_group_ = true
+
+[node name="Sky" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Sky"]
+
+[node name="Sky2" type="Sprite2D" parent="Sky/ParallaxLayer"]
+position = Vector2(522, 458)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("14_3ogqv")
+metadata/_edit_lock_ = true
+
+[node name="Mountains" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Mountains"]
+
+[node name="Mountain1" type="Sprite2D" parent="Mountains/ParallaxLayer"]
+position = Vector2(411.25, 542.75)
+scale = Vector2(1.08055, 1.21028)
+texture = ExtResource("14_jnxmh")
+
+[node name="Mountain2" type="Sprite2D" parent="Mountains/ParallaxLayer"]
+position = Vector2(673, 561.75)
+scale = Vector2(1.15, 1.25342)
+texture = ExtResource("15_w2aej")
+
+[node name="Cloud2" type="ParallaxBackground" parent="."]
+script = ExtResource("16_sstdg")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cloud2"]
+motion_mirroring = Vector2(710, 0)
+
+[node name="Cloud2" type="Sprite2D" parent="Cloud2/ParallaxLayer"]
+position = Vector2(652, 386)
+texture = ExtResource("17_xsxul")
+
+[node name="Cloud1" type="ParallaxBackground" parent="."]
+script = ExtResource("16_nttxl")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cloud1"]
+motion_mirroring = Vector2(800, 0)
+
+[node name="Cloud1" type="Sprite2D" parent="Cloud1/ParallaxLayer"]
+position = Vector2(367, 359)
+texture = ExtResource("17_r8r2i")
+
+[node name="GrassBg2" type="ParallaxBackground" parent="."]
+script = ExtResource("14_dbylw")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="GrassBg2"]
+motion_mirroring = Vector2(819, 0)
+
+[node name="Grass-bg3" type="Sprite2D" parent="GrassBg2/ParallaxLayer"]
+position = Vector2(205, 552.5)
+scale = Vector2(1, 0.9)
+texture = ExtResource("15_lglvv")
+
+[node name="Grass-bg4" type="Sprite2D" parent="GrassBg2/ParallaxLayer"]
+position = Vector2(615.27, 552.5)
+scale = Vector2(1, 0.9)
+texture = ExtResource("15_lglvv")
+
+[node name="GrassBg1" type="ParallaxBackground" parent="."]
+script = ExtResource("14_xafin")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="GrassBg1"]
+motion_mirroring = Vector2(897, 0)
+
+[node name="Grass-bg2" type="Sprite2D" parent="GrassBg1/ParallaxLayer"]
+position = Vector2(229, 547)
+scale = Vector2(1, 0.948276)
+texture = ExtResource("15_w86my")
+
+[node name="Grass-bg3" type="Sprite2D" parent="GrassBg1/ParallaxLayer"]
+position = Vector2(672, 547)
+scale = Vector2(1, 0.948)
+texture = ExtResource("15_w86my")
+
+[node name="env_object_spawner" type="Node2D" parent="."]
+script = ExtResource("16_rmjqr")
+flower1_scene = ExtResource("17_p4g62")
+flower2_scene = ExtResource("18_jx51c")
+rock1_scene = ExtResource("19_ryibq")
+rock2_scene = ExtResource("20_qy5yd")
+rock3_scene = ExtResource("21_aqp0v")
+
+[node name="SpawnTimer" type="Timer" parent="env_object_spawner"]
+
+[node name="Ground" type="ParallaxBackground" parent="."]
+script = ExtResource("14_v2452")
+
+[node name="ground_grass" type="ParallaxLayer" parent="Ground"]
+motion_mirroring = Vector2(896, 0)
+
+[node name="Grass-bg1" type="Sprite2D" parent="Ground/ground_grass"]
+position = Vector2(224, 552)
+texture = ExtResource("22_6yk40")
+
+[node name="Grass-bg2" type="Sprite2D" parent="Ground/ground_grass"]
+position = Vector2(672, 552)
+texture = ExtResource("22_6yk40")
+
+[node name="ground" type="ParallaxLayer" parent="Ground"]
+motion_mirroring = Vector2(910, 0)
+
+[node name="GroundSprite" type="Sprite2D" parent="Ground/ground"]
+position = Vector2(229, 609)
+texture = ExtResource("14_co8tq")
+
+[node name="GroundSprite2" type="Sprite2D" parent="Ground/ground"]
+position = Vector2(684, 609)
+texture = ExtResource("14_co8tq")
+
+[connection signal="timeout" from="env_object_spawner/SpawnTimer" to="env_object_spawner" method="_on_spawn_timer_timeout"]

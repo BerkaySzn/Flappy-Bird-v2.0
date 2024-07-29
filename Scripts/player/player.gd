@@ -12,7 +12,7 @@ var current_health: int = 3
 
 func _physics_process(delta):
 	var direction = Input.get_axis("Up", "Down")
-	print(direction)
+	#print(direction)
 	if direction:
 		velocity.y = direction * SPEED
 	else:
